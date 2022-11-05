@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ForecastView: View {
     
-    @State private var data: [Data] = DataList.dataList
+    var weather: ForecastData
     
     var body: some View {
         ZStack {
@@ -18,7 +18,7 @@ struct ForecastView: View {
                     VStack {
                         Text("서울")
                             .font(.title3)
-                        Text("63°")
+                        Text("\("weather.degree.first)")
                             .font(.title2)
                     }
                     Spacer()
