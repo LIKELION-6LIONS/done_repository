@@ -18,7 +18,7 @@ struct ForecastView: View {
                     VStack {
                         Text("서울")
                             .font(.title3)
-                        Text("\("weather.degree.first)")
+                        Text("\(String(weather.degree.first))")
                             .font(.title2)
                     }
                     Spacer()
@@ -53,6 +53,6 @@ struct ForecastView: View {
 
 struct ForecastView_Previews: PreviewProvider {
     static var previews: some View {
-        ForecastView()
+        ForecastView(weather: data.first!)
     }
 }
